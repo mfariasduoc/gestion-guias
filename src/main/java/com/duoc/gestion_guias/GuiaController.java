@@ -44,4 +44,9 @@ public class GuiaController {
             return "No se pudo eliminar la guía.";
         }
     }
+    // Endpoint para DESCARGAR el archivo directo desde S3
+@GetMapping("/{id}/descargar")
+public String descargarDesdeS3(@PathVariable String id) {
+    return guiaService.descargarContenidoDesdeS3(id);
+}
 }
