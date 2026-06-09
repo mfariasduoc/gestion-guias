@@ -95,4 +95,7 @@ public class GuiaService {
     public boolean eliminarGuia(String id) {
         return listaGuias.removeIf(g -> g.getId().equals(id));
     }
+    public List<GuiaDespacho> obtenerTodas() {
+    return this.listaGuias;
+}
 }
